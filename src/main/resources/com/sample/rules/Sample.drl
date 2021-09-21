@@ -1,0 +1,24 @@
+package com.sample.rules;
+unit MsgRuleUnit;
+//generated from Decision Table
+import com.sample.model.*;
+query message $m : /messages end
+// rule values at C13, header at C8
+rule "HelloWorld_13"
+	when
+		m: /messages[status == Message.HELLO]
+	then
+		System.out.println(m.getMessage());
+		m.setMessage("Goodbye cruel world");
+		m.setStatus(Message.GOODBYE);update(m);
+end
+
+// rule values at C14, header at C8
+rule "HelloWorld_14"
+	when
+		m: /messages[status == Message.GOODBYE]
+	then
+		System.out.println(m.getMessage());
+end
+
+

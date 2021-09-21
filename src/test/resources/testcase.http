@@ -1,0 +1,26 @@
+POST http://localhost:8080/helloworld
+Accept: application/json
+Content-Type: application/json
+
+{
+  "messages": [
+    {
+      "message": "Hello DTable",
+      "status": 0
+    }
+  ]
+}
+
+###
+POST http://localhost:8080/message
+Accept: application/json
+Content-Type: application/json
+
+{
+  "messages": [
+    {
+      "message": "Hello Drl",
+      "status": 0
+    }
+  ]
+}
