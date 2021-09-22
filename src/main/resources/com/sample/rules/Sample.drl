@@ -1,24 +1,21 @@
 package com.sample.rules;
 unit MsgRuleUnit;
-//generated from Decision Table
 import com.sample.model.*;
 query message $m : /messages end
-// rule values at C13, header at C8
-rule "HelloWorld_13"
+
+rule "Hello World"
 	when
-		m: /messages[status == Message.HELLO]
+		m: /messages[status == Message.HELLO, myMessage: message]
 	then
-		System.out.println(m.getMessage());
+		System.out.println(myMessage);
 		m.setMessage("Goodbye cruel world");
-		m.setStatus(Message.GOODBYE);update(m);
+		m.setStatus(Message.GOODBYE);
+		update(m);
 end
 
-// rule values at C14, header at C8
-rule "HelloWorld_14"
+rule "GoodBye"
 	when
-		m: /messages[status == Message.GOODBYE]
+		/messages[status == Message.GOODBYE, myMessage: message]
 	then
-		System.out.println(m.getMessage());
+		System.out.println(myMessage);
 end
-
-

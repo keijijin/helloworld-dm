@@ -11,9 +11,9 @@ import org.kie.api.definition.type.ClassReactive;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Message {
-    public static final int HELLO = 0;
-    public static final int GOODBYE = 1;
+    public static final Integer HELLO = 0;
+    public static final Integer GOODBYE = 1;
 
-    private int status;
+    private Integer status;
     private String message;
 }
