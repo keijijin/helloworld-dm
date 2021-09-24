@@ -24,3 +24,31 @@ Content-Type: application/json
     }
   ]
 }
+
+###
+POST http://192.168.64.22:30804/message
+Accept: application/json
+Content-Type: application/json
+
+{
+  "messages": [
+    {
+      "message": "Hello World",
+      "status": 0
+    }
+  ]
+}
+###
+POST http://192.168.64.22:30804/helloworld
+Accept: application/json
+Content-Type: application/json
+
+{
+  "messages": [
+    {
+      "message": "Hello Kubernetes",
+      "status": 0
+    }
+  ]
+}
+
