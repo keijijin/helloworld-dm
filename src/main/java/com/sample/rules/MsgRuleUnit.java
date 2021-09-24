@@ -13,5 +13,4 @@ import org.kie.kogito.rules.RuleUnitData;
 @AllArgsConstructor
 public class MsgRuleUnit implements RuleUnitData {
     private DataStore<Message> messages = DataSource.createStore();
-    private DataStore<String> smartSpeakers = DataSource.createStore();
 }
