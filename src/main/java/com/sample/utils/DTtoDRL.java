@@ -15,7 +15,7 @@ public class DTtoDRL {
 		System.out.println(strDrl);
 		
 		try {
-			PrintWriter writer = new PrintWriter(new File("src/main/resources/com/sample/rules/Sample.drl"));
+			PrintWriter writer = new PrintWriter(new File("src/main/resources/com/sample/rules/SampleDT.drl"));
 			writer.println(strDrl);
 			writer.close();
 		} catch (FileNotFoundException e) {

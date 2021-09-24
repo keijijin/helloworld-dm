@@ -5,7 +5,7 @@ Content-Type: application/json
 {
   "messages": [
     {
-      "message": "Hello DTable",
+      "message": "Hello World",
       "status": 0
     }
   ]
@@ -19,7 +19,7 @@ Content-Type: application/json
 {
   "messages": [
     {
-      "message": "Hello Drl",
+      "message": "Hello World",
       "status": 0
     }
   ]

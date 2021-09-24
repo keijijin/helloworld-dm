@@ -5,7 +5,7 @@ query message $m : /messages end
 
 rule "Hello World"
 	when
-		m: /messages[status == Message.HELLO, myMessage: message]
+		m: /messages[status == Message.HELLO, myMessage : message]
 	then
 		System.out.println(myMessage);
 		m.setMessage("Goodbye cruel world");
@@ -15,7 +15,9 @@ end
 
 rule "GoodBye"
 	when
-		/messages[status == Message.GOODBYE, myMessage: message]
+		/messages[status == Message.GOODBYE, myMessage : message]
 	then
 		System.out.println(myMessage);
 end
+
+
